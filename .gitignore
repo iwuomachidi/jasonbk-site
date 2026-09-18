@@ -1,0 +1,38 @@
+# Composer-managed code — reinstalled via `composer install`, never hand-edited.
+/vendor/
+/web/core/
+/web/libraries/
+/web/modules/contrib/
+/web/profiles/contrib/
+/web/themes/contrib/
+/drush/contrib/
+
+# Composer auth — private registry tokens, never commit.
+/auth.json
+
+# Site configuration that may contain credentials (DB creds, hash_salt, API keys,
+# trusted_host_patterns). Keep the shipped defaults/examples tracked.
+/web/sites/*/settings.php
+/web/sites/*/settings.*.php
+!/web/sites/*/default.settings.php
+!/web/sites/*/example.settings.local.php
+/web/sites/*/services.yml
+/web/sites/*/*.services.yml
+!/web/sites/*/default.services.yml
+
+# Environment files some tooling/CI populates with real secrets.
+/.env
+/.env.*
+!/.env.*.example
+
+# User-uploaded / generated content — not source, and files/private can hold
+# uploads with PII.
+/web/sites/*/files
+/web/sites/*/private
+
+# Drupal's multisite test scaffolding.
+/web/sites/simpletest
+
+# OS/editor noise.
+.DS_Store
+Thumbs.db
